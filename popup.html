@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus on Class</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Focus on Class</h1>
+  <form id="focusForm">
+    <input type="number" id="blockTime" placeholder="Tempo de Bloqueio (min)" min="1" />
+    
+    <label for="websites">Sites de distrações:</label>
+    <textarea id="urlList" placeholder="Insira URLs, uma por linha"></textarea>
+    
+    <button id="startButton" type="submit">Começar Sessão de Foco</button>
+  </form>
+
+  <button id="stopButton" class="stop-button">Parar Foco</button>
+
+  <!-- Temporizador -->
+  <div id="timer" style="display:none;">
+    <h2>Tempo Restante: <span id="timeDisplay">00:00</span></h2>
+  </div>
+
+  <div id="historyDisplay">
+    <h2>Histórico de Foco</h2>
+    <div id="historyList"></div> <!-- Esta div será usada para exibir os itens do histórico -->
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

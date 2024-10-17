@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Focus Mode",
+    "version": "1.0",
+    "permissions": [
+      "declarativeNetRequest",
+      "storage",
+      "notifications",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
